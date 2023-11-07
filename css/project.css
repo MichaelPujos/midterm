@@ -1,0 +1,620 @@
+/*Variables*/
+:root {
+    /*colors*/
+    --background-color:#F8F7F1;
+    --base-link-color: #000;
+    --primary-color: #8C8BDA;
+    --secondary-color: #000;
+    --accent-color: #555;
+
+    /*fonts*/
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Outfit', sans-serif;
+
+    /*font sizes*/
+    --base-font-size: 1rem;
+    --h1-font-size: 4rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.5rem;
+    --h4-font-size: 1.25rem;
+
+}
+
+body{
+    background: var(--background-color);
+    color: #000;
+    font: var(--base-font-size) / 1.6 var(--font-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: var(--font-secondary);
+    text-transform: capitalize;
+}
+
+a{
+    font-family: var(--font-primary);
+    color: var(--base-link-color);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/*layout styles*/
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/*header styles*/
+header{
+    display: flex;
+    align-items: center;
+    list-style: 4rem;
+    font-size: 1rem;
+}
+
+.logo{
+    margin-right: auto;
+}
+
+.menu{
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 33.33%;
+    gap: 30px;
+    text-align: right;
+}
+
+.menu-item{
+    text-align: right;
+}
+
+/* styles.css */
+.custom-svg {
+    position: absolute;
+    fill: #FAA87A;
+    filter: blur(153px);
+    outline: none;
+    z-index: 2;
+  }
+
+  /* Add this CSS code at the end of your CSS stylesheet */
+.gradient-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%; /* Adjust the width as needed */
+    height: 150%;
+    background: linear-gradient(to left, transparent, #EEA3A3);
+    z-index: -1; /* Place it behind other elements */
+    filter: blur(153px); /* Apply a blur effect similar to the first SVG */
+    opacity: 0.8; /* Adjust opacity as needed */
+}
+
+/*Section Styles*/
+.hero{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-position: right;
+    height: 473px;
+    font: 2rem / 1.6 var(--font-primary);
+}
+
+.hero_center.ready h2 {
+    color: #FFF;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: capitalize;
+    /* Remove width and height */
+    /* width: 435px;
+    height: 150px; */
+    flex-shrink: 0;
+}
+
+/* Add this CSS to your existing stylesheet */
+.hero-section p, .hero-section ul, .hero-section a {
+    color: black;
+  }
+  
+
+.hero h1 {
+    width: 506px;
+    height: 252px;
+    flex-shrink: 0;
+    color: #000;
+font-family: Outfit;
+font-size: 96px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-align: right;
+}
+
+
+.sub-text{
+    width: 50rem;
+}
+
+/*Footer Styles*/
+footer{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 7rem;
+    margin-top: 5rem;
+}
+
+.featured{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.text-container h2{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.portrait {
+    position: relative;
+    z-index: 2; /* Place the image above other elements */
+    margin-right: 30px;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 3; /* Place the text in front of the image and the gradient blur */
+  }
+
+  .hero-text h1,
+  .hero-text p,
+  .hero-text h2 {
+    color: #000; /* Set text color to white or any other desired color */
+  }
+
+.portrait img {
+    width: 380px;
+    height: 650px;
+    flex-shrink: 0;
+    border-radius: 190px;
+}
+
+
+.image-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*Hero Section Styles*/
+.hero-section{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: #000;
+    background-repeat: no-repeat;
+    height: calc(50vh - 5rem);
+    /*Set the height to 50% of the viewpoint*/
+    margin-bottom: 5rem;
+    font-family: Outfit;
+    font-style: normal;
+}
+
+.hero-content li {
+    color: #000;
+    font-family: Outfit;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.hero-section.task{
+    position: relative;
+    background-image: url(../images/NAF-logo-tagline2-gradient.png);
+    background-position: left;
+    justify-content: flex-end;
+    text-align: right;
+    z-index: 1;
+}
+
+.main-content {
+    flex: 3;
+    /* Take up 3 fractions of the available space */
+    padding: var(--section-spacing);
+    /* Add padding around the main content */
+}
+
+.main-content section,
+.main-content header {
+    margin-bottom: var(--section-spacing);
+    /* Add space below each section */
+    padding-bottom: var(--section-spacing);
+    /* Add padding at the bottom of each section */
+    border-bottom: var(--section-separator);
+    /* Add a line below each section */
+}
+
+.main-content section:last-child {
+    margin-bottom: 0;
+    /* Remove the bottom margin from the last section */
+    border-bottom: none;
+    /* Remove the line from the last section */
+}
+
+.main-content {
+    padding-top: 1rem;
+    /* Add padding at the top of the main content */
+}
+
+.main-content {
+    flex: 1; /* This makes the main content occupy the remaining space */
+    padding-top: 0.2rem;
+}
+
+.main-content section,
+    .main-content header {
+        margin-bottom: calc(.8 * var(--section-spacing));
+        padding-bottom: calc(.8 *var(--section-spacing));
+        border-bottom: calc(.8 *var(--section-separator));
+    }
+
+
+p:contains("ARE YOU READY") {
+    color: black;
+}
+
+p.ready-text {
+    color: black;
+
+/* SUB HEADING */
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 27.5px; /* 137.5% */
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+/* Add the styling for your SVG here */
+
+.hero-section.clip{
+    background-image: url(../images/featured.png);
+    background-position: right;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.hero-content{
+    width: 50rem;
+}
+
+.ready{
+    display: flex;
+    height: 25rem;
+    border-radius: 51px;
+    background: linear-gradient(277deg, #991C1C 6.08%, rgba(238, 115, 115, 0.52) 99.36%);
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    border-radius: 50px;
+    align-items: center;
+}
+
+.pill-link-black-button a{
+    display: inline-block;
+    padding: 50px 25px;
+    border-radius: 50px;
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pill-link-black-button:hover {
+    background-color: var(--accent-color);
+}
+
+.hero_center.ready{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.hero_center .hero-content{
+    text-align: center;
+}
+
+.hero_center .hero-content h1,
+.hero-content h2{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero_center .hero-content p,
+.hero-content p{
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.hero_center .hero-content a.pill-link-black-button,
+.hero-content a{
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 50px;
+    background-color: #643E29;
+    color:#ffffff;
+    text-decoration: none;
+    transition: background-color 0.3x ease;
+}
+
+.hero_center .hero-content a.pill-link-black-button:hover,
+.hero-content a:hover{
+    background-color: var(--accent-color);
+}
+
+/*form styles*/
+.column{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.column form{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.column form input[type="email"]{
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+.column form input[type="subscribe"]{
+    background-color: #643E29;
+    border-radius: 83px;
+    width: 193px;
+    height:56px;
+    flex-shrink: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* Style for the "Enter Email" input */
+input[type="email"] {
+    width: 424px;
+    height: 53px;
+    flex-shrink: 0;
+    background: #D9D9D9;
+    border: none; /* Remove the border if needed */
+    padding: 10px; /* Adjust padding as desired */
+    border-radius: 10px; /* Adjust border-radius as needed */
+    color: black; /* Text color */
+    font-size: 16px; /* Adjust the font size as desired */
+    font-family: Outfit;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 27.5px; /* 137.5% */
+letter-spacing: 1.6px;
+text-transform: uppercase;
+}
+
+/* Style for the "Subscribe" button */
+input[type="submit"] {
+    width: 193px;
+    height: 56px;
+    flex-shrink: 0;
+    border: none; /* Remove the border if needed */
+    border-radius: 83px;
+    background: #643E29;
+    color: #fff; /* Text color */
+    cursor: pointer; /* Add pointer cursor for better user experience */
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.column form input[type="subscribe"]:hover{
+    background-color: var(--accent-color);
+}
+
+.circular-image{
+    border-radius: 50%;
+    width: 119px;
+    height: 119px;
+    background-color: lightgray 50% / cover no-repeat;
+}
+
+/*Testimonials Styles*/
+.testimonials-header{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.testimonials-header h2{
+    margin-top: 500px;
+    margin-bottom: 10px;
+    color: #030000;
+    text-align: left;
+    font-size: 57px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 57px */
+}
+
+.testimonials-h2{
+    margin-top: 4rem;
+}
+
+.testimonials-header p{
+    font-size: 1.25rem;
+    color: #ABD9D9;
+}
+
+.testimonials-cards{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.testimonial{
+    margin-top: 100px;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-basis: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    width: 345px;
+    height: 261px;
+    flex-shrink: 0;
+}
+
+.testimonial .circular-image{
+    position: absolute;
+    top: -80px;
+    background-color: lightgray 50% / cover no-repeat;
+}
+
+.testimonial-color1{
+    background-color:#D6464654
+}
+
+.testimonials-header {
+    margin-bottom: -30px; /* Remove the bottom margin */
+}
+
+
+.testimonial-color2{
+    background-color: rgba(214, 70, 70, 0.33);
+}
+
+a.pill-link{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #643E29;
+    color:#fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+a.pill-link:hover{
+    background-color: #643E29;
+}
+
+a.alt-pill-link{
+    border: #89d8d1 solid 1px;
+    background-color: none;
+    border-radius: 25px;
+    padding: 15px 20px;
+    border: 2px solid #89d8d1;
+    background: rgba(161, 214, 214, 0.00);
+}
+
+/*Media Queries*/
+@media screen and (max-width: 1024px){
+    .hero{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .hero h1{
+        font-size: calc(var(--h1-font-size)*0.75);
+    }
+
+    .sub-text{
+        width: 80%;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    .column{
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero{
+        background-image: none;
+    }
+
+    .hero h1{
+        font-size: calc(var(--h1-font-size) * 0.5);
+    }
+
+    .sub-text{
+        width: 90%;
+    }
+
+    .hero-section.clip,
+    .hero-section.task{
+        background-image: none;
+    }
+
+    .testimonials-cards{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial{
+        margin-top: 5rem;
+        flex-basis: 100%;
+    }
+}
+
+@media screen and(max-width: 400px){
+    main{
+        padding: 0 20px;
+    }
+
+    .hero h1{
+        font-size: calc(var(--h1-font-size) * 0.4);
+    }
+
+    .sub-text{
+        width: 100%;
+    }
+}
